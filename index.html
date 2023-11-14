@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tirta Alam Segar</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
@@ -36,7 +37,6 @@
           <li><a href="">CAREER</a></li>
         </ul>
         <ul class="menu-mobile" id="menu-mobile">
-          
           <li><a href="">BRANDS</a></li>
           <li><a href="">BERITA & KEGIATAN</a></li>
           <li><a href="">ABOUT US</a></li>
@@ -45,19 +45,30 @@
           <li onclick="closeNav()">Close Menu</li>
         </ul>
       </nav>
+      <div class="hero">
+        <picture class="hero-image">
+          <source
+            media="(min-width:426px)"
+            srcset="./assets/images/ale-ale.jpg"
+          />
+          <img
+            src="./assets/images/ale-ale-crop.jpg"
+            alt="ale-ale dengan berbagai macam rasa"
+          />
+        </picture>
+      </div>
     </header>
     <main>
-      <section>
+      <section class="new-product">
         <h1>PRODUK TERBARU KAMI</h1>
-        <!-- <iframe
-          width="560"
-          height="315"
+        <iframe
+          
           src="https://www.youtube.com/embed/DRagrDy_tPU?si=pnwuC3BsyXbJJgF2"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
-        ></iframe> -->
+        ></iframe>
       </section>
     </main>
     <footer></footer>
