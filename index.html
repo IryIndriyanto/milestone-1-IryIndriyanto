@@ -8,43 +8,43 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <div class="logo-container">
-          <img
-            class="logo"
-            src="./assets/images/tas-logo.png"
-            alt="tirta alam segar logo"
-          />
-          <div class="ham-menu-btn" onclick="openNav()">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="1.5em"
-              viewBox="0 0 448 512"
-            >
-              <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-              <path
-                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
-              />
-            </svg>
-          </div>
+    <nav id="navbar">
+      <div class="logo-container">
+        <img
+          class="logo"
+          src="./assets/images/tas-logo.png"
+          alt="tirta alam segar logo"
+        />
+        <div class="ham-menu-btn" onclick="openNav()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="1em"
+            viewBox="0 0 448 512"
+          >
+            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path
+              d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+            />
+          </svg>
         </div>
-        <ul class="menu-dekstop">
-          <li><a href="">BRANDS</a></li>
-          <li><a href="">BERITA & KEGIATAN</a></li>
-          <li><a href="">ABOUT US</a></li>
-          <li><a href="">EXPORT</a></li>
-          <li><a href="">CAREER</a></li>
-        </ul>
-        <ul class="menu-mobile" id="menu-mobile">
-          <li><a href="">BRANDS</a></li>
-          <li><a href="">BERITA & KEGIATAN</a></li>
-          <li><a href="">ABOUT US</a></li>
-          <li><a href="">EXPORT</a></li>
-          <li><a href="">CAREER</a></li>
-          <li onclick="closeNav()">Close Menu</li>
-        </ul>
-      </nav>
+      </div>
+      <ul class="menu-dekstop">
+        <li><a href="">BRANDS</a></li>
+        <li><a href="">BERITA & KEGIATAN</a></li>
+        <li><a href="">ABOUT US</a></li>
+        <li><a href="">EXPORT</a></li>
+        <li><a href="">CAREER</a></li>
+      </ul>
+      <ul class="menu-mobile" id="menu-mobile">
+        <li><a href="">BRANDS</a></li>
+        <li><a href="">BERITA & KEGIATAN</a></li>
+        <li><a href="">ABOUT US</a></li>
+        <li><a href="">EXPORT</a></li>
+        <li><a href="">CAREER</a></li>
+        <li onclick="closeNav()">Close Menu</li>
+      </ul>
+    </nav>
+    <header>
       <div class="hero">
         <picture class="hero-image">
           <source
@@ -56,11 +56,31 @@
             alt="ale-ale dengan berbagai macam rasa"
           />
         </picture>
+        <picture class="hero-image">
+          <source
+            media="(min-width:426px)"
+            srcset="./assets/images/javana.jpg"
+          />
+          <img
+            src="./assets/images/javana-crop.jpg"
+            alt="ale-ale dengan berbagai macam rasa"
+          />
+        </picture>
+        <picture class="hero-image">
+          <source
+            media="(min-width:426px)"
+            srcset="./assets/images/teh-rio.jpg"
+          />
+          <img
+            src="./assets/images/teh-rio-crop.jpg"
+            alt="ale-ale dengan berbagai macam rasa"
+          />
+        </picture>
       </div>
     </header>
     <main>
       <section class="new-product">
-        <h1>PRODUK TERBARU KAMI</h1>
+        <h2>PRODUK TERBARU KAMI</h2>
         <iframe
           src="https://www.youtube.com/embed/DRagrDy_tPU?si=pnwuC3BsyXbJJgF2"
           title="YouTube video player"
@@ -68,7 +88,20 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
         ></iframe>
+        <article>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex maxime
+          esse eius sequi voluptatibus! Eveniet sed ipsum mollitia quasi
+          cupiditate alias saepe ab, suscipit quis vero modi ex tempora a.
+        </article>
       </section>
+      <section class="our-product">
+        <div class="circle-card">
+          <img src="" alt="" />
+        </div>
+      </section>
+      <secttion class="news">
+        <div class="news-card"></div>
+      </secttion>
     </main>
     <footer>
       <div class="footer-logo">

@@ -47,94 +47,141 @@ h6 {
 }
 
 :root {
-  --clr-bg: rgba(255, 255, 255, 0.7);
+  --clr-bg: rgba(255, 255, 255, 0.85);
+  --clr-primary: #ffa201;
 }
 
 /* CSS Styling */
 body {
-  background-color: #131313;
+  position: relative;
+  background-color: #fff;
+}
+
+.scrolled {
+    background-color: var(--clr-bg);
+  }
+
+nav {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  padding: 1rem 5vw;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-items: center; */
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  transition: background-color 0.3s ease;
+
+  @media screen and (min-width: 769px) {
+    flex-direction: row;
+  }
+
+  
+
+  & .logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .logo {
+      height: 2rem;
+    }
+
+    & .ham-menu-btn {
+      padding: 0.4em;
+      border: solid black 2px;
+      border-radius: 5px;
+
+      @media screen and (min-width: 769px) {
+        display: none;
+      }
+    }
+  }
+
+  & .menu-dekstop {
+    display: none;
+
+    @media screen and (min-width: 769px) {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    & li > a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+
+  & .menu-mobile {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+    gap: 1rem;
+    list-style: none;
+    padding-inline-start: 0;
+
+    & li > a {
+      text-decoration: none;
+      color: white;
+    }
+  }
 }
 
 header {
   width: 100%;
 
-  & nav {
-    padding: 1rem 5vw;
-    width: 100%;
+  & .hero {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /* align-items: center; */
-    background-color: var(--clr-bg);
-    backdrop-filter: blur(5px);
+    overflow-x: auto;
 
-    @media screen and (min-width: 769px) {
-      flex-direction: row;
+    .hero-image {
+      flex: 1 0 100%;
     }
-
-    & .logo-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      & .logo {
-        height: 2.5rem;
-      }
-
-      & .ham-menu-btn {
-        padding: 0.4em;
-        border: solid black 2px;
-        border-radius: 5px;
-
-        @media screen and (min-width: 769px) {
-          display: none;
-        }
-      }
-    }
-
-    & .menu-dekstop {
-      display: none;
-
-      @media screen and (min-width: 769px) {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        list-style: none;
-        gap: 2rem;
-      }
-
-      & li > a {
-        text-decoration: none;
-        color: white;
-      }
-    }
-
-    & .menu-mobile {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      padding-top: 1rem;
-      gap: 1rem;
-      list-style: none;
-      padding-inline-start: 0;
-
-      & li > a {
-        text-decoration: none;
-        color: white;
-      }
-    }
-  }
-
-  & .hero-image {
-    padding: 2rem 0;
   }
 }
 
 main {
-  .new-product {
+  & .new-product {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+    align-items: center;
+
+    & h2 {
+      margin-bottom: 2rem;
+      color: var(--clr-primary);
+    }
+
     & iframe {
       aspect-ratio: 16/9;
-      width: 80vw;
+      width: 90vw;
+    }
+
+    & article {
+      text-align: center;
+      padding: 1rem 0.5rem;
+    }
+  }
+
+  & .our-product {
+    height: 10rem;
+    color: ;
+    background-color: var(--clr-primary);
+  }
+
+  & .news {
+    color: var(--clr-primary);
+
+    & .news-card {
+      width: 20rem;
+      height: 40rem;
     }
   }
 }
@@ -145,14 +192,14 @@ footer {
   align-items: center;
   gap: 2rem;
   padding: 3rem 0;
-  background-color: var(--clr-bg);
+  background-color: #ffa201;
 
   & .footer-logo {
     width: fit-content;
     padding: 4px;
     border: solid black 2px;
     border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.85);
 
     & .logo {
       display: flex;
@@ -183,6 +230,7 @@ footer {
 
   & .footer-address {
     padding: 0 2rem;
+    max-width: 20rem;
 
     & p {
       margin-top: 0.3rem;
