@@ -58,8 +58,8 @@ body {
 }
 
 .scrolled {
-    background-color: var(--clr-bg);
-  }
+  background-color: var(--clr-bg);
+}
 
 nav {
   z-index: 1;
@@ -78,8 +78,6 @@ nav {
   @media screen and (min-width: 769px) {
     flex-direction: row;
   }
-
-  
 
   & .logo-container {
     display: flex;
@@ -171,17 +169,40 @@ main {
   }
 
   & .our-product {
-    height: 10rem;
-    color: ;
+    text-align: center;
+    padding: 2rem 2rem;
+    color: white;
     background-color: var(--clr-primary);
+
+    & h2 {
+        margin-bottom: 2rem;
+    }
+
+    & .coin-container {
+      & .coin {
+        background-color: #fff;
+        width: fit-content;
+        border-radius: 50%;
+
+        & img{
+            width: 100px;
+            height: 100px;
+        }
+      }
+    }
   }
 
   & .news {
     color: var(--clr-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
 
     & .news-card {
-      width: 20rem;
-      height: 40rem;
+      width: 18rem;
+      height: 24rem;
+      border: solid black 2px;
     }
   }
 }
