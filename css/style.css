@@ -138,3 +138,58 @@ main {
     }
   }
 }
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 0;
+  background-color: var(--clr-bg);
+
+  & .footer-logo {
+    width: fit-content;
+    padding: 4px;
+    border: solid black 2px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.6);
+
+    & .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      & img {
+        display: inline-block;
+        height: 2.5rem;
+      }
+
+      & .vertical-line {
+        display: inline-block;
+        height: 46px;
+        border-left: solid black 3px;
+      }
+
+      & .text {
+        display: inline-block;
+      }
+    }
+  }
+
+  & .social-media {
+    display: flex;
+    gap: 1rem;
+  }
+
+  & .footer-address {
+    padding: 0 2rem;
+
+    & p {
+      margin-top: 0.3rem;
+    }
+
+    & .address-tittle {
+      font-size: 1.3rem;
+    }
+  }
+}
