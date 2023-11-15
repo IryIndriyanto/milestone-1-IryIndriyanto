@@ -172,11 +172,14 @@ nav {
 
 header {
   width: 100%;
+  display: flex;
+  justify-content: center;
 
   & .hero {
     display: flex;
     overflow-x: auto;
-    
+    max-width: 1140px;
+        
     .hero-image {
       flex: 1 0 100%;
       animation: slider 25s ease-in infinite reverse;
