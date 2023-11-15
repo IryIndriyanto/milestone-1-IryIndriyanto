@@ -214,28 +214,30 @@ main {
       & iframe {
         aspect-ratio: 16/9;
         width: 90vw;
+        margin-bottom: 1.5rem;
 
         @media screen and (min-width: 769px) {
-            width: 55%;
-          }
+          width: 55%;
+        }
       }
-  
+
       & article {
-        max-width: 40%;
         text-align: center;
         /* padding: 1rem 0.5rem; */
 
-        &::before{
-            display: block;
-            content: "Ale-Ale Funflava Coco Pandan";
-            color: #ffa201;
-            margin-bottom: 1.5rem;
-            font-size: 1.25rem;
+        @media screen and (min-width: 769px) {
+          max-width: 40%;
+        }
 
+        &::before {
+          display: block;
+          content: "Ale-Ale Funflava Coco Pandan";
+          color: #ffa201;
+          margin-bottom: 1.5rem;
+          font-size: 1.25rem;
         }
       }
     }
-    
   }
 
   & .our-product {
