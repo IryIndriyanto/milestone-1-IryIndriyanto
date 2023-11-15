@@ -51,10 +51,48 @@ h6 {
   --clr-primary: #ffa201;
 }
 
+/* Animation */
+@keyframes slider {
+  0% {
+    transform: translateX(0%);
+  }
+  10% {
+    transform: translateX(0%);
+  }
+  20% {
+    transform: translateX(-100%);
+  }
+  30% {
+    transform: translateX(-100%);
+  }
+  40% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-200%);
+  }
+  60% {
+    transform: translateX(-200%);
+  }
+  70% {
+    transform: translateX(-200%);
+  }
+  80% {
+    transform: translateX(-300%);
+  }
+  90% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
 /* CSS Styling */
 body {
   position: relative;
   background-color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .scrolled {
@@ -138,9 +176,10 @@ header {
   & .hero {
     display: flex;
     overflow-x: auto;
-
+    
     .hero-image {
       flex: 1 0 100%;
+      animation: slider 25s ease-in infinite reverse;
     }
   }
 }
@@ -170,23 +209,41 @@ main {
 
   & .our-product {
     text-align: center;
-    padding: 2rem 2rem;
+    padding: 2rem 0.5rem;
     color: white;
     background-color: var(--clr-primary);
 
     & h2 {
-        margin-bottom: 2rem;
+      margin-bottom: 2rem;
+
+      &::after{
+        content: "";
+        display: block;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 10rem;
+        border-bottom: white solid 4px;
+        margin-top: .5rem;
+      }
     }
 
     & .coin-container {
+      display: flex;
+      gap: 1rem;
+      padding: 2rem 0;
+      overflow-x: scroll;
+
       & .coin {
+        flex: none;
         background-color: #fff;
         width: fit-content;
         border-radius: 50%;
+        filter: drop-shadow(2px 4px 4px rgba(24, 33, 81, 0.4));
 
-        & img{
-            width: 100px;
-            height: 100px;
+        & img {
+          width: 100px;
+          height: 100px;
         }
       }
     }
@@ -212,7 +269,7 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  padding: 3rem 0;
+  padding: 1rem 0;
   background-color: #ffa201;
 
   & .footer-logo {
@@ -260,5 +317,13 @@ footer {
     & .address-tittle {
       font-size: 1.3rem;
     }
+  }
+
+  &::after{
+    width: 100%;
+    border-top: #fff solid 2px;
+    padding-top: 1rem;
+    content: "©2023 Iry Indriyanto";
+    text-align: center;
   }
 }
