@@ -88,6 +88,24 @@ h6 {
   }
 }
 
+@keyframes scrolling-left2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+@keyframes scrolling-left1 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 /* CSS Styling */
 body {
   position: relative;
@@ -96,7 +114,7 @@ body {
 }
 
 .scrolled {
-  background-color:  #ffa20179;
+  background-color: #ffa20179;
 }
 
 nav {
@@ -177,7 +195,7 @@ header {
 
   & .hero {
     display: flex;
-    overflow-x: auto;
+    overflow-x: hidden;
     width: 100%;
 
     & .hero-image {
@@ -253,6 +271,9 @@ main {
     padding: 2rem 0.5rem;
     color: white;
     background-color: var(--clr-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     & h2 {
       margin-bottom: 2rem;
@@ -269,28 +290,39 @@ main {
       }
     }
 
-    & .coin-container {
+    & .moving-coin-container {
       display: flex;
-      gap: 1rem;
-      padding: 2rem 0;
-      overflow-x: scroll;
-      justify-content: flex-start;
+      overflow-x: hidden;
+      max-width: 800px;
 
-      @media screen and (min-width: 825px) {
-        justify-content: center;
+      & .coin-container {
+        display: flex;
+        flex: none;
+        gap: 1rem;
+        padding: 2rem 0.5rem;
+        justify-content: flex-start;
+
+        & .coin {
+          flex: none;
+          background-color: #fff;
+          width: fit-content;
+          border-radius: 50%;
+          filter: drop-shadow(2px 4px 4px rgba(24, 33, 81, 0.4));
+
+          & img {
+            width: 100px;
+            height: 100px;
+          }
+        }
       }
 
-      & .coin {
-        flex: none;
-        background-color: #fff;
-        width: fit-content;
-        border-radius: 50%;
-        filter: drop-shadow(2px 4px 4px rgba(24, 33, 81, 0.4));
+      .moving-1 {
+        animation: scrolling-left1 20s linear infinite;
+      }
 
-        & img {
-          width: 100px;
-          height: 100px;
-        }
+      .moving-2 {
+        animation: scrolling-left2 20s linear infinite;
+        animation-delay: 10s;
       }
     }
   }
