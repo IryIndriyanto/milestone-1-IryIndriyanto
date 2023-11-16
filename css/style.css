@@ -214,29 +214,29 @@ header {
 }
 
 main {
-  & .about-us{
+  & .about-us {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #ffa201;
     color: white;
     padding: 2rem;
-    font-size: .6rem;
+    font-size: 0.6rem;
 
-    @media screen and (min-width: 769px){
+    @media screen and (min-width: 769px) {
       font-size: 1rem;
     }
 
-    & div{
+    & div {
       max-width: 60rem;
       text-align: center;
       margin: 3rem 0;
     }
 
-    & h1{
+    & h1 {
       font-size: 3em;
 
-      &::after{
+      &::after {
         content: "";
         display: block;
         width: 10em;
@@ -244,14 +244,14 @@ main {
         position: relative;
         left: 50%;
         transform: translateX(-50%);
-        margin-bottom: .8em
+        margin-bottom: 0.8em;
       }
     }
 
-    & h2{
+    & h2 {
       font-size: 2.25em;
 
-      &::after{
+      &::after {
         content: "";
         display: block;
         width: 10em;
@@ -259,11 +259,11 @@ main {
         position: relative;
         left: 50%;
         transform: translateX(-50%);
-        margin-bottom: .8em
+        margin-bottom: 0.8em;
       }
     }
 
-    & p{
+    & p {
       font-size: 1.5em;
     }
   }
@@ -275,7 +275,7 @@ main {
     padding: 2rem 0;
     align-items: center;
 
-    @media screen and (min-width: 769px){
+    @media screen and (min-width: 769px) {
       font-size: 1.5rem;
     }
 
@@ -335,7 +335,7 @@ main {
     flex-direction: column;
     align-items: center;
 
-    @media screen and (min-width: 769px){
+    @media screen and (min-width: 769px) {
       font-size: 1.5rem;
     }
 
@@ -392,16 +392,41 @@ main {
   }
 
   & .news {
-    color: var(--clr-primary);
+    color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem 0;
+    padding: 2rem 2rem;
 
-    & .news-card {
-      width: 18rem;
-      height: 24rem;
-      border: solid black 2px;
+    & h2 {
+      color: var(--clr-primary);
+      font-size: 2em;
+      margin-bottom: 2rem;  
+    }
+
+    & .news-card-container {
+      display: flex;
+      overflow-x: scroll;
+      max-width: 1312px ;
+      gap: 2rem;
+      justify-content: center;
+          
+
+      & .news-card {
+        flex: none;
+        width: 18rem;
+        /* height: 24rem; */
+        border: solid black 2px;
+        border-radius: 50% 10% / 20%;
+        padding: 3rem 2rem;
+
+        & .news-img{
+          width: 100%;
+          aspect-ratio: 4/3;
+          background-color: gray;
+          margin-bottom: 1rem;
+        }
+      }
     }
   }
 }
