@@ -114,12 +114,12 @@ body {
 }
 
 .scrolled {
-  background-color: #ffa20179;
+  background-color: #ffa201aa;
 }
 
 nav {
   z-index: 1;
-  position: fixed;
+  position: sticky;
   top: 0;
   padding: 1rem 5vw;
   width: 100%;
@@ -127,12 +127,14 @@ nav {
   flex-direction: column;
   justify-content: space-between;
   /* align-items: center; */
-  background-color: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(5px);
+  background-color: #ffa201aa;
+  backdrop-filter: blur(2px);
   transition: background-color 0.3s ease;
 
   @media screen and (min-width: 769px) {
     flex-direction: row;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.1);
   }
 
   & .logo-container {
@@ -212,12 +214,70 @@ header {
 }
 
 main {
+  & .about-us{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffa201;
+    color: white;
+    padding: 2rem;
+    font-size: .6rem;
+
+    @media screen and (min-width: 769px){
+      font-size: 1rem;
+    }
+
+    & div{
+      max-width: 60rem;
+      text-align: center;
+      margin: 3rem 0;
+    }
+
+    & h1{
+      font-size: 3em;
+
+      &::after{
+        content: "";
+        display: block;
+        width: 10em;
+        border-top: solid white 5px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: .8em
+      }
+    }
+
+    & h2{
+      font-size: 2.25em;
+
+      &::after{
+        content: "";
+        display: block;
+        width: 10em;
+        border-top: solid white 5px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: .8em
+      }
+    }
+
+    & p{
+      font-size: 1.5em;
+    }
+  }
+
   & .new-product {
     /* width: 100%; */
     display: flex;
     flex-direction: column;
     padding: 2rem 0;
     align-items: center;
+
+    @media screen and (min-width: 769px){
+      font-size: 1.5rem;
+    }
 
     & h2 {
       margin-bottom: 2rem;
@@ -260,7 +320,7 @@ main {
           content: "Ale-Ale Funflava Coco Pandan";
           color: #ffa201;
           margin-bottom: 1.5rem;
-          font-size: 1.25rem;
+          font-size: 1.25em;
         }
       }
     }
@@ -274,6 +334,10 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media screen and (min-width: 769px){
+      font-size: 1.5rem;
+    }
 
     & h2 {
       margin-bottom: 2rem;
@@ -317,12 +381,12 @@ main {
       }
 
       .moving-1 {
-        animation: scrolling-left1 20s linear infinite;
+        animation: scrolling-left1 30s linear infinite;
       }
 
       .moving-2 {
-        animation: scrolling-left2 20s linear infinite;
-        animation-delay: 10s;
+        animation: scrolling-left2 30s linear infinite;
+        animation-delay: 15s;
       }
     }
   }
@@ -346,61 +410,80 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
-  padding: 1rem 0;
   background-color: #ffa201;
 
-  & .footer-logo {
-    width: fit-content;
-    padding: 4px;
-    border: solid black 2px;
-    border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.85);
-
-    & .logo {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-
-      & img {
-        display: inline-block;
-        height: 2.5rem;
-      }
-
-      & .vertical-line {
-        display: inline-block;
-        height: 46px;
-        border-left: solid black 3px;
-      }
-
-      & .text {
-        display: inline-block;
-      }
-    }
-  }
-
-  & .social-media {
+  & .footer-wrapper {
     display: flex;
-    gap: 1rem;
-  }
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem 0;
 
-  & .footer-address {
-    padding: 0 2rem;
-    max-width: 20rem;
-
-    & p {
-      margin-top: 0.3rem;
+    @media screen and (min-width: 769px) {
+      flex-direction: row;
+      align-items: start;
+      gap: 4rem;
     }
 
-    & .address-tittle {
-      font-size: 1.3rem;
+    & .logo-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+
+      & .footer-logo {
+        width: fit-content;
+        padding: 4px;
+        border: solid black 2px;
+        border-radius: 8px;
+        background-color: rgba(255, 255, 255, 0.85);
+
+        & .logo {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+
+          & img {
+            display: inline-block;
+            height: 2.5rem;
+          }
+
+          & .vertical-line {
+            display: inline-block;
+            height: 46px;
+            border-left: solid black 3px;
+          }
+
+          & .text {
+            display: inline-block;
+          }
+        }
+      }
+
+      & .social-media {
+        display: flex;
+        gap: 1rem;
+      }
+    }
+
+    & .footer-address {
+      padding: 0 2rem;
+      max-width: 20rem;
+
+      & p {
+        margin-top: 0.3rem;
+      }
+
+      & .address-tittle {
+        font-size: 1.3rem;
+      }
     }
   }
 
   &::after {
     width: 100%;
     border-top: #fff solid 2px;
-    padding-top: 1rem;
+    padding: 1rem 0;
     content: "©2023 Iry Indriyanto";
     text-align: center;
   }

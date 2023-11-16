@@ -1,10 +1,9 @@
-function openNav() {
-    document.getElementById("menu-mobile").style.display = "flex";
-  }
-  
-  function closeNav() {
-    document.getElementById("menu-mobile").style.display = "none";
-  }
+// hamburger menu button
+function navMenuBtn() {
+  const x = document.getElementById("menu-mobile");
+  x.style.display = (x.style.display === "none") ? "flex" : "none";
+}
+
 
   // navbar scroll effect
   const navbar = document.getElementById('navbar');
