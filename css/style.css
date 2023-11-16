@@ -392,25 +392,30 @@ main {
   }
 
   & .news {
-    color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
+    color: black;    
     padding: 2rem 2rem;
+    overflow: hidden;
+
+    @media screen and (min-width: 1280px){
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
     & h2 {
       color: var(--clr-primary);
       font-size: 2em;
-      margin-bottom: 2rem;  
+      margin-bottom: 2rem;
     }
 
     & .news-card-container {
       display: flex;
       overflow-x: scroll;
-      max-width: 1312px ;
+      max-width: 1312px;
       gap: 2rem;
-      justify-content: center;
-          
+      padding: 1rem;
+      /* justify-content: center; */
 
       & .news-card {
         flex: none;
@@ -420,7 +425,7 @@ main {
         border-radius: 50% 10% / 20%;
         padding: 3rem 2rem;
 
-        & .news-img{
+        & .news-img {
           width: 100%;
           aspect-ratio: 4/3;
           background-color: gray;
