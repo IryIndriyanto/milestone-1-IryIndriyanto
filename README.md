@@ -1,5 +1,7 @@
 ![](./assets/documentation/tirta-alam-segar.gif)
 
+visit at [here (netlify)](https://tirtaalamsegar.netlify.app) or [here (custom subdomain)](https://tirtaalamsegar.ranu.fun)
+
 # Introduction
 Tirta Alam Segar is a renowned beverage manufacturer committed to crafting delightful drinks that refresh and captivate consumers' taste buds. Our mission revolves around redefining refreshment through a diverse portfolio of beverages, blending iconic classics with innovative blends that reflect our dedication to quality and taste.
 

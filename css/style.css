@@ -54,37 +54,37 @@ h6 {
 /* Animation */
 @keyframes slider {
   0% {
-    transform: translateX(0%);
+    transform: translateX(-300%);
   }
   10% {
-    transform: translateX(0%);
+    transform: translateX(-300%);
   }
   20% {
-    transform: translateX(-100%);
+    transform: translateX(-200%);
   }
   30% {
-    transform: translateX(-100%);
+    transform: translateX(-200%);
   }
   40% {
-    transform: translateX(-100%);
+    transform: translateX(-200%);
   }
   50% {
-    transform: translateX(-200%);
+    transform: translateX(-100%);
   }
   60% {
-    transform: translateX(-200%);
+    transform: translateX(-100%);
   }
   70% {
-    transform: translateX(-200%);
+    transform: translateX(-100%);
   }
   80% {
-    transform: translateX(-300%);
+    transform: translateX(0%);
   }
   90% {
-    transform: translateX(-300%);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(0%);
+    transform: translateX(-300%);
   }
 }
 
@@ -202,7 +202,7 @@ header {
 
     & .hero-image {
       flex: 1 0 100%;
-      animation: slider 25s ease-in infinite reverse;
+      animation: slider 25s ease infinite;
 
       @media screen and (min-width: 769px) {
         & img {
